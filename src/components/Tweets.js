@@ -1,13 +1,22 @@
 import React, { Component } from "react";
+//import components
+import Tweet from "./Tweet";
 
-export default class Tweets extends Component {
-  render() {
-    return (
-      <div>
-        <section>
-          <h1>Tweets</h1>
-        </section>
-      </div>
-    );
-  }
-}
+const Tweets = (props) => {
+  const tweets = [
+    { name: "Kirby", tweet: "I love react.js!!!" },
+    { name: "Tim Pool", tweet: "Buy a mac!" },
+    { name: "Bob Marly", tweet: "We Jammin" },
+    { name: "Andy Bernard", tweet: "Hey Big Tuna!  ROO DOO DOOT DA DOO!!!" },
+  ];
+
+  return (
+    <section>
+      {tweets.map((tweet) => (
+        <Tweet name={tweet.name} tweet={tweet.tweet} />
+      ))}
+    </section>
+  );
+};
+
+export default Tweets;
