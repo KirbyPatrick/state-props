@@ -3,6 +3,8 @@ import "./App.css";
 //import components
 import Nav from "./components/Nav";
 import Tweets from "./components/Tweets";
+import Footer from "./components/Footer";
+import Video from "./components/Video";
 
 function App() {
   //State
@@ -35,6 +37,8 @@ function App() {
         <Nav />
         <Tweets />
       </div>
+      <Video num={counter} setToggle={toggler} />
+      <Footer toggle={toggle} />
     </div>
   );
 }
